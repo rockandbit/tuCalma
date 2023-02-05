@@ -20,7 +20,6 @@ const Services = () => {
         <div className="wrapper">
           <div className="row gutter-width-lg">
             {INFO.map((item, key) => {
-              console.log({ l: item.imgLink });
               return (
                 <div key={key} className="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                   <div className="card card-post">
