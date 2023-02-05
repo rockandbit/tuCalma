@@ -1,7 +1,7 @@
 {
-    "name": "tuCalma",
+    "name": "tu-calma",
     "version": "1.0.0",
-    "description": "Web de TuCalma",
+    "description": "Web de TuCalma - Paula Pedival de Paz",
     "author": "RAG",
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.2.1",
