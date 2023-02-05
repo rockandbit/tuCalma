@@ -41,12 +41,14 @@ const Home = () => {
         <PageTitleHome />
 
         <Services />
-        <div className="wrapper row">
-          <div className="col-md-6">
+        <div className="wrapper">
+          <div className="row gutter-width-lg with-pb-lg">
+          <div className="col-md-6 col-sm-12">
             <ContactForm />
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 col-sm-12">
             <Location />
+          </div>
           </div>
         </div>
       </main>

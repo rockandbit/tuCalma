@@ -53,14 +53,27 @@ const Header = () => {
           </div>
         ) : (
           <div className="row align-items-center">
-            <FontAwesomeIcon icon={faPhoneAlt} size="sm" className="mr-2" />
-            <span>+34 689 18 79 70 |</span>
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              size="sm"
-              className="mr-2 ml-2"
-            />
-            <div className="pb-1">tucalma.psicologia@gmail.com |</div>
+            <a href="tel:+34689187970">
+              <FontAwesomeIcon icon={faPhoneAlt} size="sm" className="mr-2" />
+              <span>+34 689 18 79 70 |</span>
+            </a>
+            <a
+              href="https://goo.gl/maps/eAmQxNNSaeBnqJYX8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faLocationDot}
+                size="sm"
+                className="mx-2"
+              />
+              <span className="pb-1">
+                Plaza Biteri 1, 1ºD, 20001, Donostia |
+              </span>
+            </a>
+            <a href="mailto:tucalma.psicologia@gmail.com" className="">
+              <FontAwesomeIcon icon={faEnvelope} size="sm" className="mx-2" />
+            </a>
             <a
               href="https://instagram.com/tucalma.psicologia"
               target={`_blank`}
@@ -73,10 +86,6 @@ const Header = () => {
             </a>
           </div>
         )}
-
-        {/* <SearchModal /> */}
-
-        {/* <MenuModal /> */}
       </div>
     </header>
   );
