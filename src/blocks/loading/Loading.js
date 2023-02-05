@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../../assets/img/logo/tuCalma.png';
+import logo from '../../assets/img/logo/texto.png';
 
 class Loading extends Component {
     performTimeConsumingTask = async () => {
@@ -39,7 +39,7 @@ class Loading extends Component {
                 <div className="wrapper h-100">
                     <div className="d-flex justify-content-center align-items-center h-100">
                         <div className="loading-content">
-                            <div className="logo logo-secondary">
+                            <div className="logo-loading">
                                 <img className="animated zoomin" src={logo} alt="tu Calma | logo" />
                             </div>
                         </div>

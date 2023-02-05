@@ -19,3 +19,11 @@
 .fadeinright {
     @extend .fadeInRight;
 }
+
+.logo-loading {
+    display: block;
+    
+    img {
+        max-height: 14.63rem;  
+    }
+}

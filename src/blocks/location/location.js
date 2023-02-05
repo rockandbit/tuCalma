@@ -8,8 +8,8 @@ class Location extends Component {
         <h3>
           <span className="line">Ubicación</span>
         </h3>
-        <a href="https://goo.gl/maps/YZLaPWUUNi42WFUGA" target="_blank">
-          <img src={locationImage} alt="Psicología Amatu ubicación" />
+        <a href="https://goo.gl/maps/tAdykMvtcADoKpC89" target="_blank" rel="noreferrer">
+          <img src={locationImage} alt="tuCalma psicología ubicación" />
         </a>
       </>
     );

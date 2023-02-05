@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Copyright = () => {
-    return (
-        <div className="copyright">
-            <p>2023 © tu Calma. Todos los derechos reservados</p>
-        </div>
-    );
+  return (
+    <div className="copyright">
+      <p>2023 © tuCalma. Todos los derechos reservados</p>
+    </div>
+  );
 };
 
 export default Copyright;

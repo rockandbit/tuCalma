@@ -25,6 +25,9 @@ const PageTitleHome = () => {
                 acompañarte a encontrar <b>tu calma</b>.
               </p>
             </div>
+            <blockquote className="mt-5">
+              “y no te falte vela ni corriente al navegar” - A.S.
+            </blockquote>
           </div>
 
           <div className="col col-2 d-none d-sm-block">
@@ -35,7 +38,7 @@ const PageTitleHome = () => {
                     <img
                       src={portada}
                       className="img-fluid"
-                      alt="Luca Reynolds"
+                      alt="Paula Pedival de Paz"
                     />
                   </div>
                 </div>
@@ -68,9 +71,6 @@ const PageTitleHome = () => {
             </div>
           </div>
         </div>
-        <blockquote>
-          “y no te falte vela ni corriente al navegar” - A.S.
-        </blockquote>
       </div>
     </section>
   );

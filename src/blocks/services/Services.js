@@ -1,5 +1,4 @@
 import React from "react";
-// import servicio from "../../assets/img/servicio1.png";
 import { INFO } from "../../data/services/services";
 
 const Services = () => {

@@ -10,6 +10,7 @@ import Location from "../blocks/location/location";
 
 // import Contacts from "../blocks/contacts/Contacts";
 import Services from "../blocks/services/Services";
+import Loading from "../blocks/loading/Loading";
 
 const Home = () => {
   document.body.classList.add("home");
@@ -32,7 +33,7 @@ const Home = () => {
         <meta name="format-detection" content="telephone=no" />
       </MetaTags>
 
-      {/* <Loading /> */}
+      <Loading />
 
       <Header />
 
