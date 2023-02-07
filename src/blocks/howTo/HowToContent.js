@@ -5,7 +5,8 @@ const HowToContent = () => {
   return (
     <div id="about" className="block">
       <h3>
-      Posibilidad de sesiones <span className="line">presenciales</span> y <span className="line">online</span>.
+        Posibilidad de sesiones <span className="line">presenciales</span> y{" "}
+        <span className="line">online</span>.
       </h3>
 
       <div className="row bg-half-ring-left gutter-width-lg">
@@ -22,8 +23,11 @@ const HowToContent = () => {
         </div>
         <div className="col align-self-center description">
           <h4>¿Cómo podemos hacerlo?</h4>
-          <p>
-          Trabajo de forma <b>presencial</b> en el gabinete y también <b>online</b>, mediante videollamadas. En función de tu necesidad, preferencia, horarios y del formato más adecuado para tí, buscaremos cuál es la mejor opción. 
+          <p className="text-justify">
+            Trabajo de forma <b>presencial</b> en el gabinete y también{" "}
+            <b>online</b>, mediante videollamadas. En función de tu necesidad,
+            preferencia, horarios y del formato más adecuado para tí, buscaremos
+            cuál es la mejor opción.
           </p>
         </div>
       </div>

@@ -1,17 +1,17 @@
 [
-    {
-        "id": "1",
-        "title": "Psicoterapia",
-        "description": "Con base en una <b>relación terapéutica</b> segura y confiable. Te acompañaré en la intervención de trastornos, dificultades o malestares relacionados con la ansiedad, la depresión, el miedo, el estrés o los problemas de sueño, entre otros"
-    },
-    {
-        "id": "2",
-        "title": "Inteligencia emocional",
-        "description": "Entendida como la capacidad de reconocer las emociones propias y las de los demás, y regularse para dar una respuesta adaptativa ante ellas. Desde este espacio podemos encontrar <b>herramientas</b> que faciliten el autoconocimiento, la autorregulación, la auto-motivación, la conciencia social y las habilidades sociales."
-    },
-    {
-        "id": "3",
-        "title": "EMDR",
-        "description":"Es un abordaje terapéutico que consiste en la desensibilización y el reprocesamiento de <b>recuerdos traumáticos</b> mediante los movimientos oculares. En sesión y mediante el protocolo EMDR cambiamos las experiencias vividas y almacenadas como negativas, en <b>experiencias integradas y adaptativas</b>."
-    }
+  {
+    "id": "1",
+    "title": "Psicoterapia",
+    "description": "<b>Psicoterapia</b> con base en una <b>relación terapéutica</b> segura y confiable. Te acompañaré en la intervención de trastornos, dificultades o malestares relacionados con la ansiedad, la depresión, el miedo, el estrés o los problemas de sueño, entre otros"
+  },
+  {
+    "id": "2",
+    "title": "Inteligencia emocional",
+    "description": "La <b>Inteligencia Emocional</b> entendida como la capacidad de reconocer las emociones propias y las de los demás, y regularse para dar una respuesta adaptativa ante ellas. Desde este espacio podemos encontrar <b>herramientas</b> que faciliten el autoconocimiento, la autorregulación, la auto-motivación, la conciencia social y las habilidades sociales."
+  },
+  {
+    "id": "3",
+    "title": "EMDR",
+    "description": "El <b>EMDR</b> es un abordaje terapéutico que consiste en la desensibilización y el reprocesamiento de <b>recuerdos traumáticos</b> mediante los movimientos oculares. En sesión y mediante el protocolo EMDR cambiamos las experiencias vividas y almacenadas como negativas, en <b>experiencias integradas y adaptativas</b>."
+  }
 ]

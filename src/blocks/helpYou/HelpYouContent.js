@@ -22,16 +22,13 @@ const HelpYouContent = () => {
           </div>
         </div>
         <div className="col align-self-center description">
-          <h4>En qué puedo ayudarte</h4>
-          <p>
+          {/* <h4>En qué puedo ayudarte</h4> */}
+          <p className="text-justify">
             Como psicóloga pretendo acompañarte y ayudarte en este proceso,
-            desde el respeto, la honestidad y la calma. Mi recomendación (y el
-            humilde consejo que doy a todas las personas a las que quiero) es
-            que pruebes a encontrar un profesional con el que sientas conexión,
-            seguridad y confianza para poder trabajar y abordar de forma
-            adecuada lo que necesites en cada momento. Si crees y sientes que
-            puedo ser yo quien te acompañe y ayude en algún aspecto de tu vida,
-            estaré encantada de emprender este proceso juntos.
+            desde el <b>respeto</b>, la <b>honestidad</b> y la <b>calma</b>. Si
+            crees y sientes que puedo ser yo quien te acompañe y ayude en algún
+            aspecto de tu vida, estaré encantada de emprender este proceso
+            juntos.
           </p>
         </div>
       </div>
