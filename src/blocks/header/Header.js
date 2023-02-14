@@ -21,7 +21,12 @@ const Header = () => {
           <div className="row align-items-center">
             <div className="px-3">
               <a href="tel:+34689187970 ">
-                <FontAwesomeIcon icon={faPhoneAlt} size="lg" className="" />
+                <FontAwesomeIcon
+                  icon={faPhoneAlt}
+                  size="lg"
+                  className=""
+                  color="#5da7ac"
+                />
               </a>
             </div>
             <div className="px-3">
@@ -31,7 +36,11 @@ const Header = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FontAwesomeIcon icon={faLocationDot} size="lg" />
+                  <FontAwesomeIcon
+                    icon={faLocationDot}
+                    size="lg"
+                    color="#5da7ac"
+                  />
                 </a>
               </p>
             </div>
@@ -40,13 +49,17 @@ const Header = () => {
                 href="https://instagram.com/tucalma.psicologia"
                 target={`_blank`}
               >
-                <FontAwesomeIcon icon={faInstagram} size="lg" />
+                <FontAwesomeIcon icon={faInstagram} size="lg" color="#5da7ac" />
               </a>
             </div>
             <div className="px-3">
               <p>
                 <a href="mailto:tucalma.psicologia@gmail.com">
-                  <FontAwesomeIcon icon={faEnvelope} size="lg" />
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    size="lg"
+                    color="#5da7ac"
+                  />
                 </a>
               </p>
             </div>
@@ -54,7 +67,12 @@ const Header = () => {
         ) : (
           <div className="row align-items-center">
             <a href="tel:+34689187970">
-              <FontAwesomeIcon icon={faPhoneAlt} size="sm" className="mr-2" />
+              <FontAwesomeIcon
+                icon={faPhoneAlt}
+                size="sm"
+                className="mr-2"
+                color="#5da7ac"
+              />
               <span>+34 689 18 79 70 |</span>
             </a>
             <a
@@ -66,13 +84,19 @@ const Header = () => {
                 icon={faLocationDot}
                 size="sm"
                 className="mx-2"
+                color="#5da7ac"
               />
               <span className="pb-1">
-                Plaza Biteri 1, 1ºD, 20001, Donostia |
+                Plaza Biteri 1, Entresuelo D, 20001, Donostia |
               </span>
             </a>
             <a href="mailto:tucalma.psicologia@gmail.com" className="">
-              <FontAwesomeIcon icon={faEnvelope} size="sm" className="mx-2" />
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                size="sm"
+                className="mx-2"
+                color="#5da7ac"
+              />
             </a>
             <a
               href="https://instagram.com/tucalma.psicologia"
@@ -82,6 +106,7 @@ const Header = () => {
                 icon={faInstagram}
                 size="sm"
                 className="mr-2 ml-2"
+                color="#5da7ac"
               />
             </a>
           </div>

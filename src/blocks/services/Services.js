@@ -6,13 +6,7 @@ const Services = () => {
     <section id="services" className="block spacer p-top-xl">
       <div className="wrapper">
         <h3 className="text-right">
-          <a
-            title="Blogging"
-            className="transform-scale-h"
-            href={process.env.PUBLIC_URL + "/journal"}
-          >
-            <span className="line">Saber más</span>
-          </a>
+          <span className="line">Saber más</span>
         </h3>
       </div>
 
@@ -43,7 +37,7 @@ const Services = () => {
                         <a
                           title={item.categoryTitle}
                           className="btn btn-sm btn-light transform-scale-h border-0"
-                          href={process.env.PUBLIC_URL + item.categoryLink}
+                          href={process.env.PUBLIC_URL + item.link}
                         >
                           {item.categoryTitle}
                         </a>

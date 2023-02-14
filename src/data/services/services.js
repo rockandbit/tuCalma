@@ -6,7 +6,6 @@ export const INFO = [
     imgLink: "quiensoy.png",
     imgAlt: "Una breve presentación sobre mí",
     categoryTitle: "Quién soy",
-    categoryLink: "/servicios",
   },
   {
     id: "2",
@@ -15,7 +14,6 @@ export const INFO = [
     imgLink: "ayudar.png",
     imgAlt: "Los servicios y la forma en la que puedo acompañarte",
     categoryTitle: "En qué te puedo ayudar",
-    categoryLink: "/servicios",
   },
   {
     id: "3",
@@ -24,6 +22,5 @@ export const INFO = [
     imgLink: "comopodemos.png",
     imgAlt: "Posibilidad de sesiones presenciales y online",
     categoryTitle: "Cómo podemos hacerlo",
-    categoryLink: "/servicios",
   },
 ];
