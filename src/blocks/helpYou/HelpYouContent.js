@@ -5,7 +5,7 @@ const HelpYouContent = () => {
   return (
     <div id="about" className="block">
       <h3>
-        Los servicios y la forma en la que puedo{" "}
+        Los servicios y la forma en la que puedo
         <span className="line">acompañarte</span>.
       </h3>
 
