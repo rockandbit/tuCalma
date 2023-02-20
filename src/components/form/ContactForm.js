@@ -1,173 +1,105 @@
-import React, { Component } from "react";
-import axios from "axios";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import emailjs from "@emailjs/browser";
 
-class ContactForm extends Component {
-  constructor(props) {
-    super(props);
+// components
+import { useEffect, useRef } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-    this.state = {
-      values: {
-        name: "",
-        email: "",
-        message: "",
-      },
-      successMessage: "Sender's message was sent successfully",
-      warningMessage: "Fill up the form, please!",
-      errorMessage: "Something go wrong. Try again later!",
-      alertClass: "",
-      responseMessage: "",
-      alertTimeout: "",
-      delay: 5000,
-    };
-  }
+const _SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const _TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const _PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
-  submitForm = async (e) => {
+const ContactUs = ({ defRef }) => {
+  const form = useRef();
+
+  // form validation schema
+  const schemaResolver = yupResolver(
+    yup.object().shape({
+      name: yup.string().required(`Introduce tu nombre`),
+      email: yup
+        .string()
+        .required(`Introduce el email`)
+        .email(`Introduce un email válido`),
+      message: yup.string().required(`Introduce un mensaje`),
+    })
+  );
+
+  // form method
+  const methods = useForm({ resolver: schemaResolver });
+  const { reset, formState } = methods;
+
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset({ email: ``, message: `` });
+    }
+  }, [formState, reset]);
+
+  const sendEmail = (e) => {
     e.preventDefault();
-
-    if (document.querySelector("#alert")) {
-      document.querySelector("#alert").remove();
-    }
-
-    this.setState({ isSubmitting: true });
-
-    axios
-      .post("https://store.adveits.com/API/form.php", this.state.values, {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json; charset=UTF-8",
-        },
-      })
-      .then((response) => {
-        if (response.data.status === "success") {
-          this.setState({ responseMessage: this.state.successMessage });
-        }
-
-        if (response.data.status === "warning") {
-          this.setState({ responseMessage: this.state.warningMessage });
-        }
-
-        if (response.data.status === "error") {
-          this.setState({ responseMessage: this.state.errorMessage });
-        }
-
-        this.callAlert(this.state.responseMessage, response.data.status);
-      })
-      .catch((error) => {
-        this.callAlert(this.state.errorMessage, "error");
-      });
-  };
-
-  removeAlert = () => {
-    clearTimeout(this.state.alertTimeout);
-    this.setState({
-      alertTimeout: setTimeout(function () {
-        var element = document.querySelector("#alert");
-        element.classList.remove("fadeIn");
-        element.classList.add("fadeOut");
-        setTimeout(function () {
-          element.remove();
-        }, 900);
-      }, this.state.delay),
-    });
-  };
-
-  callAlert = (message, type) => {
-    if (!document.querySelector("#alert")) {
-      if (type === "success") {
-        this.setState({ alertClass: "success" });
-      }
-
-      if (type === "error") {
-        this.setState({ alertClass: "danger" });
-      }
-
-      if (type === "warning") {
-        this.setState({ alertClass: "warning" });
-      }
-
-      var alert =
-        '<div id="alert" class="animated fadeIn alert alert--shadow alert-' +
-        this.state.alertClass +
-        '">' +
-        message +
-        "</div>";
-
-      var element = document.querySelector(".wpcf7-form");
-
-      element.insertAdjacentHTML("beforeend", alert);
-
-      this.removeAlert();
-    }
-  };
-
-  handleInputChange = (e) =>
-    this.setState({
-      values: {
-        ...this.state.values,
-        [e.target.name]: e.target.value,
+    emailjs.sendForm(_SERVICE_ID, _TEMPLATE_ID, form.current, _PUBLIC_KEY).then(
+      (result) => {
+        toast.success(
+          "Tu consulta se ha enviado. Pronto recibirás noticias. Muchas gracias."
+        );
       },
-    });
-
-  render() {
-    return (
-      <>
-        <h3>
-          Cuéntame <span className="line">tu caso</span>
-        </h3>
-        <form onSubmit={this.submitForm} className="wpcf7-form">
-          <p className="input-group gutter-width-30">
-            <span className="gutter-width">
-              <input
-                name="name"
-                type="text"
-                value={this.state.values.name}
-                onChange={this.handleInputChange}
-                size="30"
-                maxLength="245"
-                required="required"
-                placeholder="Name *"
-              />
-            </span>
-
-            <span className="gutter-width">
-              <input
-                name="email"
-                type="email"
-                value={this.state.values.email}
-                onChange={this.handleInputChange}
-                size="30"
-                maxLength="100"
-                required="required"
-                placeholder="Email/Phone no. *"
-              />
-            </span>
-          </p>
-
-          <p>
-            <textarea
-              name="message"
-              cols="45"
-              rows="8"
-              value={this.state.values.message}
-              onChange={this.handleInputChange}
-              maxLength="65525"
-              required="required"
-              placeholder="Message *"
-            ></textarea>
-          </p>
-
-          <p>
-            <input
-              name="submit"
-              type="submit"
-              className="btn btn-dark border-0 transform-scale-h"
-              defaultValue="Send"
-            />
-          </p>
-        </form>
-      </>
+      (error) => {
+        toast.error("Hemos tenido un problema al enviar el email");
+      }
     );
-  }
-}
+  };
 
-export default ContactForm;
+  return (
+    <>
+      <h3>
+        Cuéntame <span className="line">tu caso</span>
+      </h3>
+      <form ref={form} onSubmit={sendEmail}>
+        <p className="input-group gutter-width-30">
+          <span className="gutter-width">
+            <input
+              name="name"
+              type="text"
+              size="30"
+              maxLength="245"
+              required="required"
+              placeholder="Name *"
+            />
+          </span>
+
+          <span className="gutter-width">
+            <input
+              name="email"
+              type="email"
+              size="30"
+              maxLength="100"
+              required="required"
+              placeholder="Email/Phone no. *"
+            />
+          </span>
+        </p>
+        <p>
+          <textarea
+            name="message"
+            cols="45"
+            rows="8"
+            maxLength="65525"
+            required="required"
+            placeholder="Message *"
+          ></textarea>
+        </p>
+        <p>
+          <input
+            name="submit"
+            type="submit"
+            className="btn btn-dark border-0 transform-scale-h"
+          />
+        </p>
+      </form>
+    </>
+  );
+};
+
+export default ContactUs;

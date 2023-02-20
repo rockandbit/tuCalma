@@ -5,32 +5,35 @@ import page404 from "./pages/404";
 import AboutMe from "./pages/AboutMe";
 import HelpYou from "./pages/HelpYou";
 import HowTo from "./pages/HowTo";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route
-          exact
-          path={`${process.env.PUBLIC_URL + "/"}`}
-          component={Home}
-        />
-        <Route
-          exact
-          path={`${process.env.PUBLIC_URL + "/quien-soy"}`}
-          component={AboutMe}
-        />
-        <Route
-          exact
-          path={`${process.env.PUBLIC_URL + "/puedo-ayudar"}`}
-          component={HelpYou}
-        />
-        <Route
-          exact
-          path={`${process.env.PUBLIC_URL + "/como-lo-hacemos"}`}
-          component={HowTo}
-        />
-        {/* <Route
+    <>
+      <ToastContainer hideProgressBar={true} autoClose={3000} />
+      <Router>
+        <Switch>
+          <Route
+            exact
+            path={`${process.env.PUBLIC_URL + "/"}`}
+            component={Home}
+          />
+          <Route
+            exact
+            path={`${process.env.PUBLIC_URL + "/quien-soy"}`}
+            component={AboutMe}
+          />
+          <Route
+            exact
+            path={`${process.env.PUBLIC_URL + "/puedo-ayudar"}`}
+            component={HelpYou}
+          />
+          <Route
+            exact
+            path={`${process.env.PUBLIC_URL + "/como-lo-hacemos"}`}
+            component={HowTo}
+          />
+          {/* <Route
                     exact
                     path={ `${ process.env.PUBLIC_URL + "/journal-single-post" }` }
                     component={ JournalSinglePost }
@@ -55,9 +58,10 @@ function App() {
                     path={ `${ process.env.PUBLIC_URL + "/works-inside" }` }
                     component={ WorksInside }
                 /> */}
-        <Route exact component={page404} />
-      </Switch>
-    </Router>
+          <Route exact component={page404} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
