@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import portada from "../../assets/img/portadaPaula.png";
+import portada from "../../assets/img/portadaPaula.jpeg";
 
 const PageTitleHome = () => {
   return (

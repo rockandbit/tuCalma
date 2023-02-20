@@ -1,5 +1,5 @@
 import React from "react";
-import portada from "../../assets/img/portadaPaula.png";
+import portada from "../../assets/img/portadaPaula.jpeg";
 
 const AboutContent = () => {
   return (
