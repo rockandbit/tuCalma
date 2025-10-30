@@ -5,7 +5,7 @@
 
 ### Version 1.1.0
 Update: JS files
-Update: Sass files
+Update: Sass filess
 
 ### Version 1.0.0
 - Initial release
