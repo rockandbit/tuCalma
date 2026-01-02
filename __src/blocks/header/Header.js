@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../blocks/logo/Logo";
+import Logo from "../logo/Logo";
 import LogoTuCalma from "../../assets/img/logo/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
