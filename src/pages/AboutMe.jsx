@@ -7,6 +7,8 @@ import Loading from "../blocks/loading/Loading";
 import AboutContent from "../blocks/about/AboutContent";
 import MyBackground from "../blocks/about/MyBackground";
 import PageTitleAbout from "../blocks/page-title/PageTitleAbout";
+import PageSeo from "../seo/PageSeo";
+import { pageSeo } from "../seo/site";
 
 const AboutMe = () => {
   document.body.classList.add("page");
@@ -15,7 +17,7 @@ const AboutMe = () => {
 
   return (
     <Fragment>
- 
+      <PageSeo seo={pageSeo.about} />
 
       <Loading />
 

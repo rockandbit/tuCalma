@@ -4,6 +4,8 @@ import Header from "../blocks/header/Header";
 import Footer from "../blocks/footer/Footer";
 import PageTitleHowTo from "../blocks/page-title/PageTitleHowTo";
 import HowToContent from "../blocks/howTo/HowToContent";
+import PageSeo from "../seo/PageSeo";
+import { pageSeo } from "../seo/site";
 
 const HowTo = () => {
   document.body.classList.add("page");
@@ -12,7 +14,7 @@ const HowTo = () => {
 
   return (
     <Fragment>
-
+      <PageSeo seo={pageSeo.howTo} />
 
       <Loading />
 

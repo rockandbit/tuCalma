@@ -8,9 +8,9 @@ import { useEffect, useRef } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const _SERVICE_ID = import.meta.env.REACT_APP_EMAILJS_SERVICE_ID;
-const _TEMPLATE_ID = import.meta.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-const _PUBLIC_KEY = import.meta.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+const _SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const _TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const _PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const ContactUs = () => {
   const form = useRef();

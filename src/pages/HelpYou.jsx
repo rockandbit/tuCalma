@@ -7,6 +7,8 @@ import Footer from "../blocks/footer/Footer";
 import HelpYouContent from "../blocks/helpYou/HelpYouContent";
 import MyServices from "../blocks/helpYou/MyServices";
 import PageTitleHelpYou from "../blocks/page-title/PageTitleHelpYou";
+import PageSeo from "../seo/PageSeo";
+import { pageSeo } from "../seo/site";
 
 const HelpYou = () => {
   document.body.classList.add("page");
@@ -15,7 +17,7 @@ const HelpYou = () => {
 
   return (
     <Fragment>
-
+      <PageSeo seo={pageSeo.helpYou} />
 
       <Loading />
 

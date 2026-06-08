@@ -1,8 +1,4 @@
-import {
-  faEnvelope,
-  faLocationDot,
-  faPhoneAlt,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "../logo/Logo";
@@ -14,7 +10,6 @@ const Header = () => {
   return (
     <header id="header" className="site-header">
       <div className="wrapper d-flex justify-content-between align-items-center">
-        {/* Logo */}
         <div className="align-self-center">
           <a href="/" aria-label="Ir a la página de inicio">
             <Logo
@@ -24,7 +19,6 @@ const Header = () => {
           </a>
         </div>
 
-        {/* Iconos en fila */}
         <nav
           className="d-flex flex-row align-items-center"
           aria-label="Enlaces de contacto y redes sociales"
@@ -36,22 +30,6 @@ const Header = () => {
               title="Llamar al 689 18 79 70"
             >
               <FontAwesomeIcon icon={faPhoneAlt} size="lg" color="#5da7ac" />
-            </a>
-          </div>
-
-          <div className="px-3">
-            <a
-              href="https://www.google.com/maps/search/Plaza+Biteri+1,+20001,+Donostia"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Ver ubicación de tuCalma Psicología en Google Maps"
-              title="Ver ubicación en Google Maps"
-            >
-              <FontAwesomeIcon
-                icon={faLocationDot}
-                size="lg"
-                color="#5da7ac"
-              />
             </a>
           </div>
 
