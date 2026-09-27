@@ -3,9 +3,9 @@
     "name": "tu Calma",
     "icons": [
         {
-            "src": "/favicon.svg",
-            "type": "image/svg+xml",
-            "sizes": "any"
+            "src": "/favicon-tucalma.png",
+            "type": "image/png",
+            "sizes": "1772x1772"
         }
     ],
     "start_url": ".",
