@@ -17,7 +17,11 @@ const HelpYou = () => {
 
   return (
     <Fragment>
-      <PageSeo seo={{ path: "/puedo-ayudar", title: content.seoTitle, description: content.seoDescription }} />
+      <PageSeo
+        seo={{ path: "/puedo-ayudar", title: content.seoTitle, description: content.seoDescription }}
+        image={content.ogImage}
+        imageAlt={content.ogImageAlt}
+      />
 
       <Loading />
 

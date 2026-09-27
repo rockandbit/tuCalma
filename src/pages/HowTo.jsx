@@ -14,7 +14,11 @@ const HowTo = () => {
 
   return (
     <Fragment>
-      <PageSeo seo={{ path: "/como-lo-hacemos", title: content.seoTitle, description: content.seoDescription }} />
+      <PageSeo
+        seo={{ path: "/como-lo-hacemos", title: content.seoTitle, description: content.seoDescription }}
+        image={content.ogImage}
+        imageAlt={content.ogImageAlt}
+      />
 
       <Loading />
 

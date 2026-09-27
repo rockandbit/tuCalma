@@ -16,6 +16,8 @@ collections:
         fields:
           - { label: "SEO · título", name: "seoTitle", widget: "string" }
           - { label: "SEO · descripción", name: "seoDescription", widget: "text" }
+          - { label: "Imagen para redes sociales", name: "ogImage", widget: "image" }
+          - { label: "Texto alternativo para redes sociales", name: "ogImageAlt", widget: "string" }
           - { label: "Título principal", name: "pageTitle", widget: "string" }
           - { label: "Título de fondo", name: "titleClone", widget: "string" }
           - { label: "Presentación (HTML)", name: "introHtml", widget: "text", hint: "Puedes usar etiquetas como <b>texto</b>." }
@@ -30,6 +32,8 @@ collections:
         fields:
           - { label: "SEO · título", name: "seoTitle", widget: "string" }
           - { label: "SEO · descripción", name: "seoDescription", widget: "text" }
+          - { label: "Imagen para redes sociales", name: "ogImage", widget: "image" }
+          - { label: "Texto alternativo para redes sociales", name: "ogImageAlt", widget: "string" }
           - { label: "Título principal", name: "pageTitle", widget: "string" }
           - { label: "Título de fondo", name: "titleClone", widget: "string" }
           - { label: "Encabezado (HTML)", name: "headingHtml", widget: "text" }
@@ -44,6 +48,8 @@ collections:
         fields:
           - { label: "SEO · título", name: "seoTitle", widget: "string" }
           - { label: "SEO · descripción", name: "seoDescription", widget: "text" }
+          - { label: "Imagen para redes sociales", name: "ogImage", widget: "image" }
+          - { label: "Texto alternativo para redes sociales", name: "ogImageAlt", widget: "string" }
           - { label: "Título principal", name: "pageTitle", widget: "string" }
           - { label: "Título de fondo", name: "titleClone", widget: "string" }
           - { label: "Encabezado (HTML)", name: "headingHtml", widget: "text" }
@@ -57,6 +63,8 @@ collections:
         fields:
           - { label: "SEO · título", name: "seoTitle", widget: "string" }
           - { label: "SEO · descripción", name: "seoDescription", widget: "text" }
+          - { label: "Imagen para redes sociales", name: "ogImage", widget: "image" }
+          - { label: "Texto alternativo para redes sociales", name: "ogImageAlt", widget: "string" }
           - { label: "Título principal", name: "pageTitle", widget: "string" }
           - { label: "Título de fondo", name: "titleClone", widget: "string" }
           - { label: "Encabezado (HTML)", name: "headingHtml", widget: "text" }

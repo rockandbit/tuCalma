@@ -1,26 +1,39 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from "./site";
-
-const TELEPHONE = "+34689187970";
-const EMAIL = "mailto:tucalma.psicologia@gmail.com";
+import site from "../data/content/site.json";
 
 export default function LocalBusinessLD() {
   const ld = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: SITE_NAME,
-    url: SITE_URL,
-    telephone: TELEPHONE,
-    email: EMAIL,
-    image: DEFAULT_OG_IMAGE,
-    areaServed: [
+    "@graph": [
       {
-        "@type": "Place",
-        name: "Online",
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#organization`,
+        name: SITE_NAME,
+        url: SITE_URL,
+        logo: `${SITE_URL}/favicon-tucalma.png`,
+        image: DEFAULT_OG_IMAGE,
+        telephone: site.phoneHref,
+        email: site.email,
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: site.phoneHref,
+          contactType: "customer service",
+          email: site.email,
+          availableLanguage: "Spanish",
+        },
+        sameAs: [site.instagramUrl],
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: SITE_NAME,
+        inLanguage: "es-ES",
+        publisher: { "@id": `${SITE_URL}/#organization` },
       },
     ],
-    sameAs: ["https://instagram.com/tucalma.psicologia"],
   };
 
   return (

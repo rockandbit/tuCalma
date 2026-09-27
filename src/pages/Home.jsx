@@ -20,7 +20,11 @@ const Home = () => {
 
   return (
     <Fragment>
-      <PageSeo seo={{ path: "/", title: content.seoTitle, description: content.seoDescription }} />
+      <PageSeo
+        seo={{ path: "/", title: content.seoTitle, description: content.seoDescription }}
+        image={content.ogImage}
+        imageAlt={content.ogImageAlt}
+      />
 
       <Loading />
       <LocalBusinessLD />

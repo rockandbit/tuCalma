@@ -17,7 +17,11 @@ const AboutMe = () => {
 
   return (
     <Fragment>
-      <PageSeo seo={{ path: "/quien-soy", title: content.seoTitle, description: content.seoDescription }} />
+      <PageSeo
+        seo={{ path: "/quien-soy", title: content.seoTitle, description: content.seoDescription }}
+        image={content.ogImage}
+        imageAlt={content.ogImageAlt}
+      />
 
       <Loading />
 
