@@ -1,4 +1,5 @@
-[
+{
+  "items": [
   {
     "id": "1",
     "title": "Psicoterapia",
@@ -14,4 +15,5 @@
     "title": "EMDR",
     "description": "El <b>EMDR</b> es un abordaje terapéutico que consiste en la desensibilización y el reprocesamiento de <b>recuerdos traumáticos</b> mediante los movimientos oculares. En sesión y mediante el protocolo EMDR cambiamos las experiencias vividas y almacenadas como negativas, en <b>experiencias integradas y adaptativas</b>."
   }
-]
+  ]
+}

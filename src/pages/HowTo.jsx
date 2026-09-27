@@ -5,7 +5,7 @@ import Footer from "../blocks/footer/Footer";
 import PageTitleHowTo from "../blocks/page-title/PageTitleHowTo";
 import HowToContent from "../blocks/howTo/HowToContent";
 import PageSeo from "../seo/PageSeo";
-import { pageSeo } from "../seo/site";
+import content from "../data/content/how-to.json";
 
 const HowTo = () => {
   document.body.classList.add("page");
@@ -14,7 +14,7 @@ const HowTo = () => {
 
   return (
     <Fragment>
-      <PageSeo seo={pageSeo.howTo} />
+      <PageSeo seo={{ path: "/como-lo-hacemos", title: content.seoTitle, description: content.seoDescription }} />
 
       <Loading />
 

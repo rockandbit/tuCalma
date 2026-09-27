@@ -1,5 +1,7 @@
+import parse from "html-react-parser";
 import React from "react";
 import portada from "../../assets/img/portadaPaula.jpeg";
+import content from "../../data/content/home.json";
 
 const PageTitleHome = () => {
   return (
@@ -9,23 +11,19 @@ const PageTitleHome = () => {
           <div className="col col-1 position-relative">
             <div className="title">
               <h1 className="h">
-                tu Calma<span className="dot">.</span>
+                {content.pageTitle}<span className="dot">.</span>
               </h1>
 
-              <div className="title-clone">tu Calma</div>
+              <div className="title-clone">{content.titleClone}</div>
             </div>
 
             <div className="spacer p-top-lg d-flex">
               <p className="p-large w-75 text-justify">
-                Soy <b>psicoterapeuta</b>, con 10 años de formación y desde una
-                mirada integrativa y holística, procuro ayudar a las personas a
-                sentir <b>bienestar</b> en los diferentes momentos de su vida.
-                En ocasiones las mareas nos pueden abrumar, mi propósito es
-                acompañarte a encontrar <b>tu calma</b>.
+                {parse(content.introHtml)}
               </p>
             </div>
             <blockquote className="mt-5">
-              “y no te falte vela ni corriente al navegar” - A.S.
+              {content.quote}
             </blockquote>
           </div>
 
@@ -35,9 +33,9 @@ const PageTitleHome = () => {
                 <div className="img object-fit">
                   <div className="object-fit-cover">
                     <img
-                      src={portada}
+                      src={content.heroImage || portada}
                       className="img-fluid"
-                      alt="Paula Pedival de Paz"
+                      alt={content.heroImageAlt}
                     />
                   </div>
                 </div>

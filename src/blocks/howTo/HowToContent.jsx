@@ -1,12 +1,13 @@
+import parse from "html-react-parser";
 import React from "react";
 import portada from "../../assets/img/placeholder/comopodemos.png";
+import content from "../../data/content/how-to.json";
 
 const HowToContent = () => {
   return (
     <div id="about" className="block">
       <h3>
-        Posibilidad de sesiones <span className="line">presenciales</span> y{" "}
-        <span className="line">online</span>.
+        {parse(content.headingHtml)}
       </h3>
 
       <div className="row bg-half-ring-left gutter-width-lg">
@@ -14,20 +15,17 @@ const HowToContent = () => {
           <div className="img object-fit">
             <div className="object-fit-cover">
               <img
-                src={portada}
-                alt="Cómo podemos hacerlo?"
+                src={content.heroImage || portada}
+                alt={content.heroImageAlt}
                 className="img-fluid"
               />
             </div>
           </div>
         </div>
         <div className="col align-self-center description">
-          <h4>¿Cómo podemos hacerlo?</h4>
+          <h4>{content.introTitle}</h4>
           <p className="text-justify">
-            Trabajo de forma <b>presencial</b> en el gabinete y también{" "}
-            <b>online</b>, mediante videollamadas. En función de tu necesidad,
-            preferencia, horarios y del formato más adecuado para tí, buscaremos
-            cuál es la mejor opción.
+            {parse(content.introHtml)}
           </p>
         </div>
       </div>

@@ -1,12 +1,13 @@
+import parse from "html-react-parser";
 import React from "react";
 import portada from "../../assets/img/placeholder/ayudar.png";
+import content from "../../data/content/help-you.json";
 
 const HelpYouContent = () => {
   return (
     <div id="about" className="block">
       <h3>
-        Los servicios y la forma en la que puedo
-        <span className="line">acompañarte</span>.
+        {parse(content.headingHtml)}
       </h3>
 
       <div className="row bg-half-ring-left gutter-width-lg">
@@ -14,21 +15,16 @@ const HelpYouContent = () => {
           <div className="img object-fit">
             <div className="object-fit-cover">
               <img
-                src={portada}
-                alt="Paula Pedival de Paz"
+                src={content.heroImage || portada}
+                alt={content.heroImageAlt}
                 className="img-fluid"
               />
             </div>
           </div>
         </div>
         <div className="col align-self-center description">
-          {/* <h4>En qué puedo ayudarte</h4> */}
           <p className="text-justify">
-            Como psicóloga pretendo acompañarte y ayudarte en este proceso,
-            desde el <b>respeto</b>, la <b>honestidad</b> y la <b>calma</b>. Si
-            crees y sientes que puedo ser yo quien te acompañe y ayude en algún
-            aspecto de tu vida, estaré encantada de emprender este proceso
-            juntos.
+            {parse(content.introHtml)}
           </p>
         </div>
       </div>

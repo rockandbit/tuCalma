@@ -1,0 +1,122 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+publish_mode: simple
+
+collections:
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - name: "home"
+        label: "Inicio"
+        file: "src/data/content/home.json"
+        fields:
+          - { label: "SEO · título", name: "seoTitle", widget: "string" }
+          - { label: "SEO · descripción", name: "seoDescription", widget: "text" }
+          - { label: "Título principal", name: "pageTitle", widget: "string" }
+          - { label: "Título de fondo", name: "titleClone", widget: "string" }
+          - { label: "Presentación (HTML)", name: "introHtml", widget: "text", hint: "Puedes usar etiquetas como <b>texto</b>." }
+          - { label: "Cita", name: "quote", widget: "string" }
+          - { label: "Imagen principal", name: "heroImage", widget: "image", required: false }
+          - { label: "Texto alternativo de la imagen", name: "heroImageAlt", widget: "string" }
+          - { label: "Título de servicios", name: "servicesHeading", widget: "string" }
+
+      - name: "about"
+        label: "Quién soy"
+        file: "src/data/content/about.json"
+        fields:
+          - { label: "SEO · título", name: "seoTitle", widget: "string" }
+          - { label: "SEO · descripción", name: "seoDescription", widget: "text" }
+          - { label: "Título principal", name: "pageTitle", widget: "string" }
+          - { label: "Título de fondo", name: "titleClone", widget: "string" }
+          - { label: "Encabezado (HTML)", name: "headingHtml", widget: "text" }
+          - { label: "Título de presentación", name: "introTitle", widget: "string" }
+          - { label: "Presentación (HTML)", name: "introHtml", widget: "text" }
+          - { label: "Imagen", name: "heroImage", widget: "image", required: false }
+          - { label: "Texto alternativo de la imagen", name: "heroImageAlt", widget: "string" }
+
+      - name: "help_you"
+        label: "Te ayudo"
+        file: "src/data/content/help-you.json"
+        fields:
+          - { label: "SEO · título", name: "seoTitle", widget: "string" }
+          - { label: "SEO · descripción", name: "seoDescription", widget: "text" }
+          - { label: "Título principal", name: "pageTitle", widget: "string" }
+          - { label: "Título de fondo", name: "titleClone", widget: "string" }
+          - { label: "Encabezado (HTML)", name: "headingHtml", widget: "text" }
+          - { label: "Presentación (HTML)", name: "introHtml", widget: "text" }
+          - { label: "Imagen", name: "heroImage", widget: "image", required: false }
+          - { label: "Texto alternativo de la imagen", name: "heroImageAlt", widget: "string" }
+
+      - name: "how_to"
+        label: "Cómo lo hacemos"
+        file: "src/data/content/how-to.json"
+        fields:
+          - { label: "SEO · título", name: "seoTitle", widget: "string" }
+          - { label: "SEO · descripción", name: "seoDescription", widget: "text" }
+          - { label: "Título principal", name: "pageTitle", widget: "string" }
+          - { label: "Título de fondo", name: "titleClone", widget: "string" }
+          - { label: "Encabezado (HTML)", name: "headingHtml", widget: "text" }
+          - { label: "Título de presentación", name: "introTitle", widget: "string" }
+          - { label: "Presentación (HTML)", name: "introHtml", widget: "text" }
+          - { label: "Imagen", name: "heroImage", widget: "image", required: false }
+          - { label: "Texto alternativo de la imagen", name: "heroImageAlt", widget: "string" }
+
+  - name: "lists"
+    label: "Listados"
+    files:
+      - name: "background"
+        label: "Formación y enfoque"
+        file: "src/data/aboutMe/aboutMe.json"
+        fields:
+          - name: "items"
+            label: "Bloques"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Texto (HTML)", name: "description", widget: "text" }
+
+      - name: "services"
+        label: "Servicios y acompañamiento"
+        file: "src/data/helpYou/helpYou.json"
+        fields:
+          - name: "items"
+            label: "Servicios"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Título interno", name: "title", widget: "string" }
+              - { label: "Texto (HTML)", name: "description", widget: "text" }
+
+      - name: "home_cards"
+        label: "Tarjetas de inicio"
+        file: "src/data/services/services.json"
+        fields:
+          - name: "items"
+            label: "Tarjetas"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Enlace", name: "link", widget: "string" }
+              - { label: "Texto alternativo de imagen", name: "imgAlt", widget: "string" }
+              - { label: "Categoría", name: "categoryTitle", widget: "string" }
+              - { label: "Imagen", name: "image", widget: "image", required: false, hint: "Si se deja vacía, se usa la imagen actual." }
+              - { label: "Imagen actual", name: "imgLink", widget: "string", hint: "Nombre del archivo existente dentro de src/assets/img/placeholder/." }
+
+  - name: "settings"
+    label: "Ajustes"
+    files:
+      - name: "site"
+        label: "Contacto y pie de página"
+        file: "src/data/content/site.json"
+        fields:
+          - { label: "Teléfono para enlace", name: "phoneHref", widget: "string", hint: "Solo números, con prefijo de país. Ejemplo: +34689187970" }
+          - { label: "Teléfono visible", name: "phoneDisplay", widget: "string" }
+          - { label: "Correo electrónico", name: "email", widget: "string" }
+          - { label: "URL de Instagram", name: "instagramUrl", widget: "string" }
+          - { label: "Copyright", name: "copyright", widget: "string" }

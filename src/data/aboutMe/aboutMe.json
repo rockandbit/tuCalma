@@ -1,4 +1,5 @@
-[
+{
+  "items": [
   {
     "id": "1",
     "title": "Formación",
@@ -14,4 +15,5 @@
     "title": "Consejos",
     "description": "Mi recomendación (y el humilde consejo que doy a todas las personas a las que quiero) es que pruebes a encontrar un profesional con el que sientas <b>conexión</b>, <b>seguridad</b> y <b>confianza</b> para poder trabajar y abordar de forma adecuada lo que necesites en cada momento."
   }
-]
+  ]
+}

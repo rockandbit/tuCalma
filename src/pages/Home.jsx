@@ -8,7 +8,7 @@ import LocalBusinessLD from "../seo/LocalBusinessLD.jsx";
 import PageSeo from "../seo/PageSeo";
 import PageTitleHome from "../blocks/page-title/PageTitleHome";
 import Services from "../blocks/services/Services";
-import { pageSeo } from "../seo/site";
+import content from "../data/content/home.json";
 
 const Home = () => {
   useEffect(() => {
@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     <Fragment>
-      <PageSeo seo={pageSeo.home} />
+      <PageSeo seo={{ path: "/", title: content.seoTitle, description: content.seoDescription }} />
 
       <Loading />
       <LocalBusinessLD />

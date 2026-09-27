@@ -1,5 +1,6 @@
 import React from "react";
-import { INFO } from "../../data/services/services";
+import content from "../../data/content/home.json";
+import services from "../../data/services/services.json";
 
 const images = import.meta.glob(
   "../../assets/img/placeholder/*",
@@ -11,16 +12,16 @@ const Services = () => {
     <section id="services" className="block spacer p-top-xl">
       <div className="wrapper">
         <h3 className="text-right">
-          <span className="line">Saber más</span>
+          <span className="line">{content.servicesHeading}</span>
         </h3>
       </div>
 
       <div className="bg-gray-light ptb-services">
         <div className="wrapper">
           <div className="row gutter-width-lg">
-            {INFO.map((item, key) => {
+            {services.items.map((item) => {
               return (
-                <div key={key} className="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div key={item.id} className="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                   <div className="card card-post">
                     <div className="card-top position-relative">
                       <a
@@ -31,7 +32,7 @@ const Services = () => {
                           <div className="object-fit-cover transform-scale-h">
                             <img
                               className="card-top-img"
-                              src={images[`../../assets/img/placeholder/${item.imgLink}`]}
+                              src={item.image || images[`../../assets/img/placeholder/${item.imgLink}`]}
                               alt={item.imgAlt}
                             />
                           </div>

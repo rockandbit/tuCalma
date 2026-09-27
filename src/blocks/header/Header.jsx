@@ -5,6 +5,7 @@ import Logo from "../logo/Logo";
 import LogoTuCalma from "../../assets/img/logo/logo.png";
 import React from "react";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import site from "../../data/content/site.json";
 
 const Header = () => {
   return (
@@ -25,9 +26,9 @@ const Header = () => {
         >
           <div className="px-3">
             <a
-              href="tel:+34689187970"
-              aria-label="Llamar al teléfono 689 18 79 70"
-              title="Llamar al 689 18 79 70"
+              href={`tel:${site.phoneHref}`}
+              aria-label={`Llamar al teléfono ${site.phoneDisplay}`}
+              title={`Llamar al ${site.phoneDisplay}`}
             >
               <FontAwesomeIcon icon={faPhoneAlt} size="lg" color="#5da7ac" />
             </a>
@@ -35,7 +36,7 @@ const Header = () => {
 
           <div className="px-3">
             <a
-              href="https://instagram.com/tucalma.psicologia"
+              href={site.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Ir al perfil de Instagram de tuCalma Psicología"
@@ -47,8 +48,8 @@ const Header = () => {
 
           <div className="px-3">
             <a
-              href="mailto:tucalma.psicologia@gmail.com"
-              aria-label="Enviar un correo a tucalma.psicologia@gmail.com"
+              href={`mailto:${site.email}`}
+              aria-label={`Enviar un correo a ${site.email}`}
               title="Enviar correo"
             >
               <FontAwesomeIcon icon={faEnvelope} size="lg" color="#5da7ac" />

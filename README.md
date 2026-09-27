@@ -1,16 +1,30 @@
-# React + Vite
+# tuCalma
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+tuCalma is a Vite and React website hosted on Netlify. Editable website content is managed through Decap CMS at `/admin/`.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Use Node.js 20, matching Netlify's build environment.
 
-## React Compiler
+```bash
+npm ci
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+`npm run build` writes the production site to `dist/` and regenerates the sitemap.
 
-## Expanding the ESLint configuration
+## CMS publishing flow
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Decap CMS publishes edits directly to the `master` branch through Netlify Git Gateway. Netlify then builds and deploys the committed change.
+
+The CMS is configured in `public/admin/config.yml`. Editable data is in `src/data/`; images uploaded through the CMS are stored in `public/uploads/`.
+
+## Netlify setup
+
+1. Enable **Identity** for the Netlify site.
+2. Set registration to **Invite only** and invite every editor.
+3. Enable **Git Gateway** under Identity services.
+4. Leave Git Gateway roles unset so each invited Identity user can publish changes.
+5. Use a GitHub token scoped to the `rockandbit/tuCalma` repository with **Contents: Read and write** for Git Gateway.
+
+The site-wide Identity widget handles invitation and password-reset links, and takes successful logins to `/admin/`. The admin page is public to load, but editing and publishing require a Netlify Identity login.

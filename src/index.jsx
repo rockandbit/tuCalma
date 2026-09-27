@@ -6,6 +6,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import netlifyIdentity from "netlify-identity-widget";
 
+netlifyIdentity.on("init", (user) => {
+  if (!user) {
+    netlifyIdentity.on("login", () => {
+      window.location.assign("/admin/");
+    });
+  }
+});
+
 netlifyIdentity.init();
 
 ReactDOM.createRoot(document.getElementById("root")).render(

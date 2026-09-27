@@ -1,9 +1,10 @@
 import React from "react";
+import site from "../../data/content/site.json";
 
 const Copyright = () => {
   return (
     <div className="copyright">
-      <p>2023 © tuCalma. Todos los derechos reservados</p>
+      <p>{site.copyright}</p>
     </div>
   );
 };

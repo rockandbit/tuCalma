@@ -8,7 +8,7 @@ import HelpYouContent from "../blocks/helpYou/HelpYouContent";
 import MyServices from "../blocks/helpYou/MyServices";
 import PageTitleHelpYou from "../blocks/page-title/PageTitleHelpYou";
 import PageSeo from "../seo/PageSeo";
-import { pageSeo } from "../seo/site";
+import content from "../data/content/help-you.json";
 
 const HelpYou = () => {
   document.body.classList.add("page");
@@ -17,7 +17,7 @@ const HelpYou = () => {
 
   return (
     <Fragment>
-      <PageSeo seo={pageSeo.helpYou} />
+      <PageSeo seo={{ path: "/puedo-ayudar", title: content.seoTitle, description: content.seoDescription }} />
 
       <Loading />
 

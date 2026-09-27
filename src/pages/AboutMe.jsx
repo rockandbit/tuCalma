@@ -8,7 +8,7 @@ import AboutContent from "../blocks/about/AboutContent";
 import MyBackground from "../blocks/about/MyBackground";
 import PageTitleAbout from "../blocks/page-title/PageTitleAbout";
 import PageSeo from "../seo/PageSeo";
-import { pageSeo } from "../seo/site";
+import content from "../data/content/about.json";
 
 const AboutMe = () => {
   document.body.classList.add("page");
@@ -17,7 +17,7 @@ const AboutMe = () => {
 
   return (
     <Fragment>
-      <PageSeo seo={pageSeo.about} />
+      <PageSeo seo={{ path: "/quien-soy", title: content.seoTitle, description: content.seoDescription }} />
 
       <Loading />
 
