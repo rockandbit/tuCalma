@@ -7,7 +7,7 @@
       "imgLink": "quiensoy.png",
       "imgAlt": "Una breve presentación sobre mí",
       "categoryTitle": "Quién soy",
-      "image": ""
+      "image": "/uploads/quien-soy.png"
     },
     {
       "id": "2",
@@ -16,7 +16,7 @@
       "imgLink": "ayudar.png",
       "imgAlt": "Los servicios y la forma en la que puedo acompañarte",
       "categoryTitle": "En qué te puedo ayudar",
-      "image": ""
+      "image": "/uploads/te-ayudo.png"
     },
     {
       "id": "3",
@@ -25,7 +25,7 @@
       "imgLink": "comopodemos.png",
       "imgAlt": "Posibilidad de sesiones presenciales y online",
       "categoryTitle": "Cómo podemos hacerlo",
-      "image": ""
+      "image": "/uploads/como-lo-hacemos.png"
     }
   ]
 }
