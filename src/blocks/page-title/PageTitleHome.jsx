@@ -4,6 +4,9 @@ import portada from "../../assets/img/portadaPaula.jpeg";
 import content from "../../data/content/home.json";
 
 const PageTitleHome = () => {
+  const sizePercent = (value) =>
+    Number.isFinite(value) && value >= 25 && value <= 200 ? value : 100;
+
   return (
     <section id="page-title" className="block">
       <div className="wrapper">
@@ -11,7 +14,15 @@ const PageTitleHome = () => {
           <div className="col col-1 position-relative">
             <div className="title">
               <h1 className="h">
-                {content.pageTitle}<span className="dot">.</span>
+                <span style={{ fontSize: `${sizePercent(content.pageTitleSize)}%` }}>
+                  {content.pageTitle}
+                </span><span
+                  className="dot"
+                  style={{
+                    fontSize: `${sizePercent(content.dotSize)}%`,
+                    color: content.dotColor || undefined,
+                  }}
+                >.</span>
               </h1>
 
               <div className="title-clone">{content.titleClone}</div>

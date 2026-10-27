@@ -19,6 +19,9 @@ collections:
           - { label: "Imagen para redes sociales", name: "ogImage", widget: "image" }
           - { label: "Texto alternativo para redes sociales", name: "ogImageAlt", widget: "string" }
           - { label: "Título principal", name: "pageTitle", widget: "string" }
+          - { label: "Tamaño del título principal (%)", name: "pageTitleSize", widget: "number", value_type: "int", min: 25, max: 200, step: 1, default: 100, hint: "100 mantiene el tamaño actual de «tu Calma». Se adapta a la pantalla." }
+          - { label: "Tamaño del punto (%)", name: "dotSize", widget: "number", value_type: "int", min: 25, max: 200, step: 1, default: 100, hint: "100 mantiene el tamaño actual del punto. Es independiente del tamaño del título." }
+          - { label: "Color del punto", name: "dotColor", widget: "color", default: "#cccccc", hint: "Selecciona el color del punto del título principal." }
           - { label: "Título de fondo", name: "titleClone", widget: "string" }
           - { label: "Presentación (HTML)", name: "introHtml", widget: "text", hint: "Puedes usar etiquetas como <b>texto</b>." }
           - { label: "Cita", name: "quote", widget: "string" }
